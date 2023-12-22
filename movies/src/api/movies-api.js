@@ -43,26 +43,20 @@ export const getMovies = () => {
       return response.json();
     };
     
-    export const getTopRatedMovies = async () => {
-      try {
-        const response = await fetch('/api/top', {
-          method: 'GET',
-          headers: {
-            'Authorization': window.localStorage.getItem('token'),
-          }
-        });
-    
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+    export const getTopRatedMovies = () => {
+      return fetch('http://localhost:8080/api/topmovies', {
+        headers: {
+          'Authorization': window.localStorage.getItem('token')
         }
-    
-        const data = await response.json();
-        return data.results; // Adjust this based on the actual structure of the response
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        throw error;
-      }
+      })
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`Failed to fetch top movies. Status: ${res.status}`);
+        }
+        return res.json();
+      });
     };
+    
     
     
     
