@@ -8,7 +8,7 @@ Name: Daniel Lawton
  + Login Page Ex: username=user1, password=test123@.
  + New Actors Page using tmdb-api
  + Protected Routes/Authentication
- + Movies-api to host top rated movies information
+ + Movies-api to host top rated movies information attempted
 
 ## Setup requirements.
 
