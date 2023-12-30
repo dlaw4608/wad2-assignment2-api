@@ -3,7 +3,7 @@ import PageTemplate from "../components/templateMovieListPage";
 import { useQuery } from 'react-query'
 import Spinner from '../components/spinner'
 import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
-import {getTopRatedMovies} from '../api/movies-api'
+import {getTopRatedMovies} from '../api/tmdb-api'
 import { useParams } from "react-router-dom";
 import { MoviesContext } from "../contexts/moviesContext";
 
